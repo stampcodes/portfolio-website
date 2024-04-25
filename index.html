@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+  <title>Personal Portfolio Website</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet">
+  <script src="https://kit.fontawesome.com/6ec090a23d.js" crossorigin="anonymous"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="script/jquery.scrollify.js"></script>
+  <script>
+    $(function () {
+      $.scrollify({
+        section: ".div-scrollify",
+        easing: "easeOutExpo",
+        scrollSpeed: 1300,
+        offset: 0,
+        scrollbars: true, // Disabilita le barre di scorrimento del browser
+        setHeights: false,
+        overflowScroll: true,
+        updateHash: true,
+        touchScroll: true,
+        before: function () { },
+        after: function () { },
+        afterResize: function () { },
+        afterRender: function () { }
+      });
+    });
+  </script>
+</head>
+
+<body>
+
+  <!-- --------------------------------------------HEADER--------------------------------------------- -->
+  <header id="header" class="div-scrollify">
+    <div class="container">
+      <nav>
+        <img src="img/logo2.png" class="logo">
+        <ul id="sidemenu">
+          <li><a href="#header">Home</a></li>
+          <li><a href="#about">About Me</a></li>
+          <li><a href="#portfolio">My Work</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <i class="fas fa-times" onclick="closemenu()"></i>
+        </ul>
+        <i class="fas fa-bars" onclick="openmenu()"></i>
+
+      </nav>
+      <div class="header-text">
+        <h1>&lt;h1&gt; Hi, I'm <span>Andrea</span>
+          <br>
+          Fragnelli from Modena &lt;/h1&gt;
+        </h1>
+        <div class="divnickname">
+          <p class="nickname">&lt;p&gt;For friends, &quot;<span>Stamp</span>&quot;&lt;/p&gt;
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="scroll-to scroll-to-header">
+      <h2>Scroll to About Me <i class="fa-solid fa-arrow-down"></i></h2>
+    </div>
+  </header>
+  <!-- -----------------------------------------ABOUT----------------------------------------------- -->
+  <div id="about" class="div-scrollify">
+    <div class="container">
+      <div class="row">
+        <div class="about-col-1">
+          <img src="img/skills.gif" onclick="opentab('skills')" class="tab-imgs active-img" id="skills-img"
+            alt="skills">
+          <img src="img/experience.gif" onclick="opentab('experience')" class="tab-imgs" id="experience-img"
+            alt="experience">
+          <img src="img/education.gif" onclick="opentab('education')" class="tab-imgs" id="education-img"
+            alt="education">
+        </div>
+        <div class="about-col-2">
+          <h1 class="sub-title">About Me</h1>
+          <p>
+          <p><strong>Focus</strong>!<br>
+            📍 Passionate about both technology and the great outdoors, especially the liberating feeling of the
+            mountains.<br>
+            📚 Immersed in the vast digital world, discovering that curiosity leads to happiness.<br>
+            ⏰ Started working post-high school for money, then realized passion's value.<br>
+            💡 Took the leap into further studies, now constantly finding satisfaction.</p>
+
+          </p>
+          <div class="tab-titles">
+            <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+            <p class="tab-links" onclick="opentab('experience')">Experience</p>
+            <p class="tab-links" onclick="opentab('education')">Education</p>
+          </div>
+          <div class="tab-contents active-tab" id="skills">
+            <ul>
+              <li><span>HTML and CSS</span><br>Web Development.</li>
+              <li><span>Marketing</span><br>Marketing campaigns.</li>
+            </ul>
+          </div>
+          <div class="tab-contents" id="experience">
+            <ul>
+              <li><span>2023 - Current</span><br>Website Management and Advertisement Placement.</li>
+              <li><span>2022 - 2023</span><br>Social Media Manager.</li>
+              <li><span>2018 - 2022</span><br>Diagnostic Technician.</li>
+            </ul>
+          </div>
+          <div class="tab-contents" id="education">
+            <ul>
+              <li><span>2024 - Current</span><br>Blockchain Development.</li>
+              <li><span>2022 - Current</span><br>English Course.</li>
+              <li><span>2022</span><br>E-commerce and Marketing Course.</li>
+              <li><span>2020</span><br>Marketing Course.</li>
+              <li><span>2018</span><br>Electronics Technician Diploma, I.I.S. F.CORNI TECNICO, Modena (MO).</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="scroll-to">
+      <h2>Scroll to My Work <i class="fa-solid fa-arrow-down"></i></h2>
+    </div>
+  </div>
+  <!---------------------------------------- MY WORK ---------------------------------------------------->
+  <div id="portfolio" class="div-scrollify">
+    <div class="container">
+      <h1 class="sub-title">My Work</h1>
+      <div class="portfolio-list">
+        <div class="github">
+          <i class="fa-brands fa-github"></i>
+          <h2>My GitHub</h2>
+          <p>Discover my work on GitHub.</p>
+          <a href="https://github.com/stampcodes" target="_blank" class="btn btn3">Go to My GitHub</a>
+        </div>
+
+        <div>
+          <i class="fa-solid fa-file"></i>
+          <h2>Project Web3 Education</h2>
+          <p>Discover the dApp and NFT.</p>
+          <a href="img/project-education.pdf" download class="btn">Download PDF</a>
+        </div>
+      </div>
+      <div class="scroll-to">
+        <h2>Scroll to Contact Me <i class="fa-solid fa-arrow-down"></i></h2>
+      </div>
+    </div>
+  </div>
+  <!-- -----------------------------------------CONTACT------------------------------------------------->
+  <div id="contact" class="div-scrollify">
+    <div class="container">
+      <h1 class="sub-title titlecontact">Contact me</h1>
+      <div class="row">
+        <div class="contact-left">
+          <div class="social-icons">
+            <a href="https://www.linkedin.com/in/andrea-fragnelli-a1ab4a207/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+            <a href="https://www.facebook.com/andrea.fragnelli.58/" target="_blank"><i class="fa-brands fa-square-facebook"></i></a>
+            <a href="https://www.instagram.com/stamp.exe/" target="_blank"><i class="fa-brands fa-square-instagram"></i></a>
+          </div>
+        </div>
+        <div class="contact-right">
+          <form id="emailjs">
+            <input type="text" name="Name" placeholder="Your Name" required>
+            <input type="email" name="Email" placeholder="Your Email" required>
+            <textarea name="message" rows="6" placeholder="Your Message" required></textarea>
+            <button type="submit" class="btn btn2">Submit</button>
+          </form>
+          <!-- Div per il messaggio di successo -->
+          <div id="success-message" style="display: none;">Email successfully sent!</div>
+
+          <!-- Div per il messaggio di errore -->
+          <div id="error-message" style="display: none;">Error sending email. Please try again later.</div>
+        </div>
+      </div>
+    </div>
+    <div class="copyright">
+      <p>Copyright &copy; 2024 Stamp. All rights reserved.</p>
+    </div>
+  </div>
+  <!---------------------------------------------------SCRIPT---------------------------------------------->
+  <script>
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+    var tabimgs = document.getElementsByClassName("tab-imgs");
+    function opentab(tabname) {
+      for (tablink of tablinks) {
+        tablink.classList.remove("active-link");
+      }
+      for (tabcontent of tabcontents) {
+        tabcontent.classList.remove("active-tab");
+      }
+      for (tabimg of tabimgs) {
+        tabimg.classList.remove("active-img");
+      }
+      event.currentTarget.classList.add("active-link");
+      document.getElementById(tabname).classList.add("active-tab");
+      document.getElementById(tabname + "-img").classList.add("active-img");
+    }
+  </script>
+  <script>
+    window.addEventListener('scroll', function () {
+      var scrollPosition = window.scrollY;
+      var translateY = Math.min(scrollPosition, document.getElementById('header').offsetHeight);
+      document.getElementById('header').querySelector('img').style.transform = 'translateY(' + translateY + 'px)';
+    });
+  </script>
+
+  <script>
+    var sidemenu = document.getElementById("sidemenu");
+    function openmenu() {
+      sidemenu.style.right = "0";
+    }
+    function closemenu() {
+      sidemenu.style.right = "-200px";
+    }
+  </script>
+
+  <script>
+    // Function to disable Scrollify on mobile devices
+    function disableScrollifyOnMobile() {
+      // Check if the screen width is less than or equal to 600px (or the size you desire)
+      if (window.innerWidth <= 1025) {
+        // Disable Scrollify
+        $.scrollify.disable();
+      } else {
+        // Enable Scrollify if the screen width is greater than 600px
+        $.scrollify.enable();
+      }
+    }
+
+    // Call the function when the document is ready
+    $(document).ready(function () {
+      disableScrollifyOnMobile();
+    });
+
+    // Call the function when the window is resized
+    $(window).resize(function () {
+      disableScrollifyOnMobile();
+    });
+  </script>
+
+  <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+  <script>
+    (function () {
+      emailjs.init("Xv2ukgIG4nYqVenOs");
+    })();
+  </script>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const form = document.getElementById('emailjs');
+      const successMessage = document.getElementById('success-message');
+      const errorMessage = document.getElementById('error-message');
+
+      form.addEventListener('submit', function (event) {
+        event.preventDefault(); // Impedisce l'invio del modulo predefinito
+
+        // Invia i dati del modulo a EmailJS
+        emailjs.sendForm('service_n7p177b', 'template_jov794d', this)
+          .then(function (response) {
+            console.log('Email successfully sent!', response);
+            // Aggiungi qui il codice per gestire la visualizzazione di un messaggio di successo all'utente
+            successMessage.style.display = 'block'; // Mostra il messaggio di successo
+            setTimeout(function () {
+              successMessage.style.display = 'none';
+            }, 5000);
+            errorMessage.style.display = 'none'; // Nasconde il messaggio di errore
+          }, function (error) {
+            console.error('Error sending email, Please try again later.', error);
+            // Aggiungi qui il codice per gestire la visualizzazione di un messaggio di errore all'utente
+            successMessage.style.display = 'none'; // Nasconde il messaggio di successo
+            errorMessage.style.display = 'block'; // Mostra il messaggio di errore
+            setTimeout(function () {
+              errorMessage.style.display = 'none';
+            }, 5000);
+          });
+      });
+    });
+  </script>
+
+
+</body>
+
+</html>

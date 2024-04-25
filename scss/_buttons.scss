@@ -1,0 +1,40 @@
+/*-----------------BTN---------------*/
+
+@keyframes rotate {
+  from {
+    transform: rotateX(0deg);
+  }
+
+  to {
+    transform: rotateX(360deg);
+  }
+}
+
+.btn {
+  text-decoration: none;
+  color: #fff;
+  font-size: 20px;
+  font-weight: 700;
+  margin-top: 20px;
+  display: block;
+  width: fit-content;
+  margin: 50px auto auto 0;
+  border: none;
+  padding: 14px 50px;
+  border-radius: 10px;
+  background: #F79621;
+  transition: background 1s;
+  cursor: pointer;
+}
+
+/* Animazione della rotazione al passaggio del mouse */
+.btn:hover,
+.btn:focus {
+  animation: rotate 0.5s linear forwards;
+  /* Ruota una volta e si ferma */
+}
+
+.btn:hover {
+  background: #00AEC7;
+  border: none;
+}

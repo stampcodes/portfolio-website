@@ -1,0 +1,91 @@
+/* ------------------- CONTACT ---------------*/
+
+#contact {
+  padding: 30px 0;
+  color: #fff;
+  width: 100%;
+  height: 100vh;
+}
+
+.sub-title.titlecontact {
+  margin-bottom: 40px;
+}
+
+.contact-left {
+  flex-basis: 7%;
+  display: flex;
+  justify-content: center;
+
+}
+
+.contact-right {
+  flex-basis: 60%;
+}
+
+
+.social-icons a {
+  text-decoration: none;
+  font-size: 120px;
+  display: block;
+  color: #00AEC7;
+  transition: transform 0.5s;
+  margin-left: 250px;
+
+}
+
+.social-icons a:hover {
+  color: #F79621;
+  transform: translateY(-5px);
+}
+
+.social-icons a i {
+  margin-top: -10px;
+  margin-bottom: 17px;
+  display: block;
+  margin-right: 1px;
+  margin-left: 1px;
+}
+
+
+
+.contact-right form {
+  width: 100%;
+}
+
+form input,
+form textarea {
+  width: 100%;
+  border: 0;
+  outline: none;
+  background: #333333;
+  padding: 15px;
+  margin: 0 0 30px 0;
+  color: #fff;
+  font-size: 18px;
+  border-radius: 6px;
+}
+
+.copyright {
+  width: 100%;
+  text-align: center;
+  padding: 25px 0;
+  font-weight: 400;
+  background-color: #262626;
+  margin-top: 70px;
+}
+
+#success-message, #error-message {
+  margin-top: 10px;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+#success-message {
+  background-color: #c7f0c7;
+  color: #008000;
+}
+
+#error-message {
+  background-color: #f0c7c7;
+  color: #ff0000;
+}

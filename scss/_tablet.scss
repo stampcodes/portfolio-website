@@ -1,0 +1,148 @@
+/* ----------------------------Tablet Styles------------------- */
+
+@media only screen and (min-width: 401px) and (max-width: 1025px) {
+
+  #about {
+    height: auto;
+  }
+
+  #portfolio {
+    height: auto;
+  }
+
+  #contact {
+    height: auto;
+  }
+
+  #header {
+    background-image: url(../img/mobile-background-website.jpg);
+  }
+
+  .header-text {
+    margin-top: 100px;
+    font-size: 200px;
+  }
+
+  .header-text h1 {
+    font-size: 40px;
+  }
+
+  .header-text p {
+    font-size: 30px;
+  }
+
+
+  nav .fas {
+    display: block;
+    font-size: 40px;
+  }
+
+  nav ul {
+    background: #F79621;
+    position: fixed;
+    top: 0;
+    right: -200px;
+    width: 200px;
+    height: 100vh;
+    padding-top: 50px;
+    z-index: 2;
+    transition: right 0.5s;
+  }
+
+  nav ul li {
+    display: block;
+    margin: 25px;
+    font-size: 50px;
+  }
+
+  nav ul li a{
+    font-size: 25px;
+  }
+
+  nav ul .fa-times {
+    position: absolute;
+    top: 40px;
+    left: 25px;
+    cursor: pointer;
+  }
+
+  .logo {
+    width: 300px;
+  }
+
+  .fa-bars {
+    position: absolute;
+    top: 40px;
+    right: 40px;
+    cursor: pointer;
+    
+  }
+
+  .scroll-to {
+    display: none;
+  }
+
+  .sub-title {
+    font-size: 40px;
+  }
+
+  .about-col-1,
+  .about-col-2 {
+    flex-basis: 100%;
+  }
+
+  .about-col-1 {
+    margin-bottom: 30px;
+  }
+
+  .about-col-2 {
+    font-size: 21px;
+  }
+
+  .tab-links {
+    font-size: 23px;
+    margin-right: 20px;
+  }
+
+  .contact-left,
+  .contact-right {
+    flex-basis: 100%;
+    font-size: small;
+  }
+
+  div.portfolio-list {
+    margin: auto;
+  }
+
+  h1.sub-title {
+    margin-bottom: 20px;
+  }
+
+  .social-icons a {
+    font-size: 70px;
+    display: block;
+    margin-left: 15px;
+    margin-bottom: 30px;
+  }
+
+  div.social-icons {
+    display: flex;
+    justify-content: center;
+  }
+
+  a.btn.btn3{
+    display: block;
+    margin: 0;
+  }
+
+  .github{
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+   
+   
+  }
+
+  
+  
+}

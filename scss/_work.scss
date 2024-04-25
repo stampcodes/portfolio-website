@@ -1,0 +1,56 @@
+/* --------------- MY WORK -------------- */
+
+
+#portfolio {
+  padding: 30px 0;
+  color: #232323;
+  width: 100%;
+  height: 100vh;
+}
+
+.portfolio-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-gap: 40px;
+  margin-top: 50px;
+  margin-bottom: 290px;
+
+}
+
+.portfolio-list div {
+  background: #00AEC7;
+  padding: 40px;
+  font-size: 13px;
+  font-weight: 300;
+  border-radius: 15px;
+  transition: background 0.5s, transform 0.5s;
+
+
+}
+
+.portfolio-list div i {
+  font-size: 70px;
+  margin-bottom: 30px;
+}
+
+.portfolio-list div h2 {
+  font-size: 40px;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+.portfolio-list div p {
+  font-size: 18px;
+  font-weight: 400;
+}
+
+.portfolio-list div:hover {
+  background: #F79621;
+  transform: translateY(-10px);
+
+}
+
+
+
+
+
