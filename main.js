@@ -1,3 +1,22 @@
+$(function () {
+  $.scrollify({
+    section: ".div-scrollify",
+    easing: "easeOutExpo",
+    scrollSpeed: 1300,
+    offset: 0,
+    scrollbars: true, // Disabilita le barre di scorrimento del browser
+    setHeights: false,
+    overflowScroll: true,
+    updateHash: true,
+    touchScroll: true,
+    before: function () { },
+    after: function () { },
+    afterResize: function () { },
+    afterRender: function () { }
+  });
+});
+
+
 var tablinks = document.getElementsByClassName("tab-links");
 var tabcontents = document.getElementsByClassName("tab-contents");
 var tabimgs = document.getElementsByClassName("tab-imgs");
