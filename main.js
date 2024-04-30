@@ -71,11 +71,11 @@ $(window).resize(function () {
   disableScrollifyOnMobile();
 });
 
-(function () {
-  emailjs.init("Xv2ukgIG4nYqVenOs");
-})();
+
+  
 
 document.addEventListener('DOMContentLoaded', function () {
+  emailjs.init("Xv2ukgIG4nYqVenOs");
   const form = document.getElementById('emailjs');
   const successMessage = document.getElementById('success-message');
   const errorMessage = document.getElementById('error-message');
