@@ -22,7 +22,7 @@ nav .fas {
   #header {
     width: 100%;
     height: 100vh;
-    background-image: url(../img/mobile-background-website.jpg);
+    background-image: url(../img/mobile-background-website.jpg) !important;
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
