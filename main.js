@@ -22,9 +22,9 @@ $(function () {
   });
 });
 
-var tablinks = document.getElementsByClassName("tab-links");
-var tabcontents = document.getElementsByClassName("tab-contents");
-var tabimgs = document.getElementsByClassName("tab-imgs");
+let tablinks = document.getElementsByClassName("tab-links");
+let tabcontents = document.getElementsByClassName("tab-contents");
+let tabimgs = document.getElementsByClassName("tab-imgs");
 
 function opentab(tabname) {
   // Converti HTMLCollection in array e usa forEach
@@ -46,8 +46,8 @@ function opentab(tabname) {
 }
 
 window.addEventListener("scroll", function () {
-  var scrollPosition = window.scrollY;
-  var translateY = Math.min(
+  let scrollPosition = window.scrollY;
+  let translateY = Math.min(
     scrollPosition,
     document.getElementById("header").offsetHeight
   );
@@ -55,7 +55,7 @@ window.addEventListener("scroll", function () {
     "translateY(" + translateY + "px)";
 });
 
-var sidemenu = document.getElementById("sidemenu");
+let sidemenu = document.getElementById("sidemenu");
 function openmenu() {
   sidemenu.style.right = "0";
 }
@@ -76,12 +76,12 @@ function disableScrollifyOnMobile() {
 }
 
 // Call the function when the document is ready
-$(document).ready(function () {
+$(function () {
   disableScrollifyOnMobile();
 });
 
 // Call the function when the window is resized
-$(window).resize(function () {
+$(window).on("resize", function () {
   disableScrollifyOnMobile();
 });
 
