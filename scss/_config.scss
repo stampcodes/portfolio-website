@@ -3,21 +3,22 @@
   padding: 0;
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
 }
-
 
 body {
   background: #232323;
   color: #fff;
 }
 
-
 /* ----------- SCROLL BAR -------------*/
-
 
 ::-webkit-scrollbar {
   width: 8px;
-  border-radius: .25rem;
+  border-radius: 0.25rem;
 }
 
 ::-webkit-scrollbar-track {
@@ -25,22 +26,19 @@ body {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #F79621;
+  background: #f79621;
   border-radius: 50%;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #00AEC7;
+  background: #00aec7;
 }
 
-
-
 .scroll-to {
-  color: #F79621;
+  color: #f79621;
   text-align: center;
 }
 
 .scroll-to.scroll-to-header {
   margin-top: 320px;
-
 }
