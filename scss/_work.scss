@@ -4,8 +4,7 @@
   padding: 30px 0;
   color: #232323;
   width: 100%;
-  max-height: 100vh;
-  overflow-y: auto;
+  height: 100vh;
 }
 
 .portfolio-list {
@@ -13,7 +12,6 @@
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 40px;
   margin-top: 50px;
-  margin-bottom: 50px;
 }
 
 .portfolio-list div {
@@ -22,9 +20,8 @@
   font-size: 13px;
   border-radius: 15px;
   transition: background 0.5s, transform 0.5s;
-  height: auto;
   box-sizing: border-box;
-  position: relative; /* Aggiunto per evitare sovrapposizioni */
+  position: relative;
 }
 
 .portfolio-list div i {
