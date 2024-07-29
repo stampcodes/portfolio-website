@@ -25,16 +25,21 @@ $(function () {
 var tablinks = document.getElementsByClassName("tab-links");
 var tabcontents = document.getElementsByClassName("tab-contents");
 var tabimgs = document.getElementsByClassName("tab-imgs");
+
 function opentab(tabname) {
-  for (tablink of tablinks) {
+  // Converti HTMLCollection in array e usa forEach
+  Array.from(tablinks).forEach(function (tablink) {
     tablink.classList.remove("active-link");
-  }
-  for (tabcontent of tabcontents) {
+  });
+
+  Array.from(tabcontents).forEach(function (tabcontent) {
     tabcontent.classList.remove("active-tab");
-  }
-  for (tabimg of tabimgs) {
+  });
+
+  Array.from(tabimgs).forEach(function (tabimg) {
     tabimg.classList.remove("active-img");
-  }
+  });
+
   event.currentTarget.classList.add("active-link");
   document.getElementById(tabname).classList.add("active-tab");
   document.getElementById(tabname + "-img").classList.add("active-img");
@@ -60,12 +65,12 @@ function closemenu() {
 
 // Function to disable Scrollify on mobile devices
 function disableScrollifyOnMobile() {
-  // Check if the screen width is less than or equal to 600px (or the size you desire)
+  // Check if the screen width is less than or equal to 1025px (or the size you desire)
   if (window.innerWidth <= 1025) {
     // Disable Scrollify
     $.scrollify.disable();
   } else {
-    // Enable Scrollify if the screen width is greater than 600px
+    // Enable Scrollify if the screen width is greater than 1025px
     $.scrollify.enable();
   }
 }
