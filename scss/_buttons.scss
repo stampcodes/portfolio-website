@@ -1,15 +1,5 @@
 /*-----------------BTN---------------*/
 
-@keyframes rotate {
-  from {
-    transform: rotateX(0deg);
-  }
-
-  to {
-    transform: rotateX(360deg);
-  }
-}
-
 .btn {
   text-decoration: none;
   color: #fff;
@@ -22,7 +12,7 @@
   border: none;
   padding: 14px 50px;
   border-radius: 10px;
-  background: #F79621;
+  background: #f79621;
   transition: background 1s;
   cursor: pointer;
 }
@@ -35,6 +25,6 @@
 }
 
 .btn:hover {
-  background: #00AEC7;
+  background: #00aec7;
   border: none;
 }
