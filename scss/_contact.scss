@@ -1,10 +1,13 @@
-/* ------------------- CONTACT ---------------*/
+/* ------------------- CONTACT --------------- */
 
 #contact {
   padding: 30px 0;
   color: #fff;
   width: 100%;
-  height: 100vh;
+  min-height: 100vh; /* Cambiato da height a min-height per garantire l'espansione */
+  display: flex; /* Aggiunto per il layout flessibile */
+  flex-direction: column;
+  justify-content: center; /* Centra verticalmente */
 }
 
 .sub-title.titlecontact {
@@ -15,26 +18,23 @@
   flex-basis: 7%;
   display: flex;
   justify-content: center;
-
 }
 
 .contact-right {
   flex-basis: 60%;
 }
 
-
 .social-icons a {
   text-decoration: none;
   font-size: 120px;
   display: block;
-  color: #00AEC7;
+  color: #00aec7;
   transition: transform 0.5s;
   margin-left: 250px;
-
 }
 
 .social-icons a:hover {
-  color: #F79621;
+  color: #f79621;
   transform: translateY(-5px);
 }
 
@@ -45,8 +45,6 @@
   margin-right: 1px;
   margin-left: 1px;
 }
-
-
 
 .contact-right form {
   width: 100%;
@@ -71,10 +69,11 @@ form textarea {
   padding: 25px 0;
   font-weight: 600;
   background-color: #262626;
-  margin-top: 70px;
+  margin-top: auto;
 }
 
-#success-message, #error-message {
+#success-message,
+#error-message {
   margin-top: 10px;
   padding: 10px;
   border-radius: 5px;

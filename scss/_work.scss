@@ -24,6 +24,7 @@
   transition: background 0.5s, transform 0.5s;
   height: auto;
   box-sizing: border-box;
+  position: relative; /* Aggiunto per evitare sovrapposizioni */
 }
 
 .portfolio-list div i {
