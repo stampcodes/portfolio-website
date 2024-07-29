@@ -1,55 +1,47 @@
 /* --------------- MY WORK -------------- */
 
-
 #portfolio {
   padding: 30px 0;
   color: #232323;
   width: 100%;
-  height: 100vh;
+  max-height: 100vh;
+  overflow-y: auto;
 }
 
 .portfolio-list {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: repeat(3, 1fr);
   grid-gap: 40px;
   margin-top: 50px;
-  margin-bottom: 290px;
-
+  margin-bottom: 50px;
 }
 
 .portfolio-list div {
-  background: #00AEC7;
-  padding: 40px;
+  background: #00aec7;
+  padding: 20px;
   font-size: 13px;
   border-radius: 15px;
   transition: background 0.5s, transform 0.5s;
-
-
+  height: auto;
+  box-sizing: border-box;
 }
 
 .portfolio-list div i {
-  font-size: 70px;
-  margin-bottom: 30px;
+  font-size: 50px;
+  margin-bottom: 20px;
 }
 
 .portfolio-list div h2 {
-  font-size: 40px;
+  font-size: 30px;
   font-weight: 600;
-  margin-bottom: 15px;
+  margin-bottom: 10px;
 }
 
 .portfolio-list div p {
-  font-size: 18px;
-  
+  font-size: 16px;
 }
 
 .portfolio-list div:hover {
-  background: #F79621;
+  background: #f79621;
   transform: translateY(-10px);
-
 }
-
-
-
-
-
