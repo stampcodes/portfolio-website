@@ -6,7 +6,6 @@ nav .fas {
 
 /* Mobile Styles */
 @media only screen and (max-width: 500px) {
-
   #about {
     height: auto;
   }
@@ -20,15 +19,7 @@ nav .fas {
   }
 
   #header {
-    width: 100%;
-    height: 100vh;
-    background-image: url(../img/mobile-background-website.jpg);
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: bottom;
-    background-attachment: fixed;
-    position: relative;
-   
+    height: auto;
   }
 
   .header-text {
@@ -44,16 +35,13 @@ nav .fas {
     font-size: 18px;
   }
 
-
-
   nav .fas {
     display: block;
     font-size: 25px;
-
   }
 
   nav ul {
-    background: #F79621;
+    background: #f79621;
     position: fixed;
     top: 0;
     right: -200px;
@@ -109,7 +97,7 @@ nav .fas {
     font-size: 14px;
   }
 
-  div .tab-contents li{
+  div .tab-contents li {
     font-size: 16px;
   }
 
@@ -142,5 +130,31 @@ nav .fas {
   div.social-icons {
     display: flex;
     justify-content: center;
+  }
+
+  .skills-columns {
+    display: block;
+    margin: 20px 0;
+  }
+
+  .skills-column {
+    display: block;
+    margin: 20px 0;
+  }
+
+  .portfolio-list {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .tab-contents ul li span {
+    font-size: 17px;
+    color: #f79621;
+  }
+  .spaced-paragraph-last {
+    font-size: 15px;
+  }
+  .spaced-paragraph {
+    font-size: 15px;
   }
 }
