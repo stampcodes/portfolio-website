@@ -1,7 +1,6 @@
 /* ----------------------------Tablet Styles------------------- */
 
 @media only screen and (min-width: 401px) and (max-width: 1025px) {
-
   #about {
     height: auto;
   }
@@ -31,14 +30,13 @@
     font-size: 30px;
   }
 
-
   nav .fas {
     display: block;
     font-size: 40px;
   }
 
   nav ul {
-    background: #F79621;
+    background: #f79621;
     position: fixed;
     top: 0;
     right: -200px;
@@ -55,7 +53,7 @@
     font-size: 50px;
   }
 
-  nav ul li a{
+  nav ul li a {
     font-size: 25px;
   }
 
@@ -75,7 +73,6 @@
     top: 40px;
     right: 40px;
     cursor: pointer;
-    
   }
 
   .scroll-to {
@@ -113,6 +110,14 @@
   div.portfolio-list {
     margin: auto;
   }
+  .portfolio-list {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .portfolio-list p {
+    margin-bottom: 10px;
+  }
 
   h1.sub-title {
     margin-bottom: 20px;
@@ -130,19 +135,23 @@
     justify-content: center;
   }
 
-  a.btn.btn3{
+  a.btn.btn3 {
     display: block;
     margin: 0;
   }
 
-  .github{
+  a.btn {
+    display: block;
+    margin: 0;
+  }
+
+  .github {
     display: flex;
     justify-content: space-around;
     flex-direction: column;
-   
-   
   }
 
-  
-  
+  #portfolio p {
+    font-size: 20px;
+  }
 }
