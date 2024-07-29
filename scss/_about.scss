@@ -98,3 +98,14 @@
 .spaced-paragraph {
   margin-bottom: 10px;
 }
+
+.skills-columns {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.skills-column {
+  flex: 0 0 48%; /* Imposta la larghezza delle colonne per distribuire meglio lo spazio */
+  box-sizing: border-box;
+}
