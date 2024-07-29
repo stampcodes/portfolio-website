@@ -1,182 +1,268 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0"
+    />
+    <title>Personal Portfolio Website</title>
+    <link rel="icon" type="image/x-icon" href="img/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="img/favicon.ico" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/6ec090a23d.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="script/jquery.scrollify.js"></script>
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
 
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
-  <title>Personal Portfolio Website</title>
-  <link rel="icon" type="image/x-icon" href="img/favicon.ico">
-  <link rel="apple-touch-icon" sizes="180x180" href="img/favicon.ico">
-  <link rel="stylesheet" href="css/style.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-    rel="stylesheet">
-  <script src="https://kit.fontawesome.com/6ec090a23d.js" crossorigin="anonymous"></script>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-  <script src="script/jquery.scrollify.js"></script>
-  <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <meta
+      property="og:title"
+      content="Personal Portfolio of Andrea Fragnelli"
+    />
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:image"
+      content="https://stampcodes.github.io/portfolio-website/img/share-bg.png"
+    />
+    <meta
+      property="og:url"
+      content="https://stampcodes.github.io/portfolio-website/"
+    />
+    <meta
+      property="og:description"
+      content="Welcome to my personal portfolio website where I showcase my skills in Web Development, and more. Discover my projects and professional journey."
+    />
+  </head>
 
-  <meta property="og:title" content="Personal Portfolio of Andrea Fragnelli" />
-  <meta property="og:type" content="website" />
-  <meta property="og:image" content="https://stampcodes.github.io/portfolio-website/img/share-bg.png" />
-  <meta property="og:url" content="https://stampcodes.github.io/portfolio-website/" />
-  <meta property="og:description"
-    content="Welcome to my personal portfolio website where I showcase my skills in Web Development, and more. Discover my projects and professional journey." />
-</head>
-
-<body>
-
-  <!-- --------------------------------------------HEADER--------------------------------------------- -->
-  <header id="header" class="div-scrollify">
-    <div class="container">
-      <nav>
-        <img src="img/logo2.png" class="logo" alt="Logo of my website">
-        <ul id="sidemenu">
-          <li><a href="#header">Home</a></li>
-          <li><a href="#about">About Me</a></li>
-          <li><a href="#portfolio">My Work</a></li>
-          <li><a href="#contact">Contact</a></li>
-          <i class="fas fa-times" onclick="closemenu()"></i>
-        </ul>
-        <i class="fas fa-bars" onclick="openmenu()"></i>
-
-      </nav>
-      <div class="header-text">
-        <h1>Hi, I'm <span>Andrea</span>
-          <br>
-          Fragnelli from Modena
-        </h1>
-        <div class="divnickname">
-          <p class="nickname">For friends, &quot;<span>Stamp</span>&quot;
-          </p>
+  <body>
+    <!-- --------------------------------------------HEADER--------------------------------------------- -->
+    <header id="header" class="div-scrollify">
+      <div class="container">
+        <nav>
+          <img src="img/logo2.png" class="logo" alt="Logo of my website" />
+          <ul id="sidemenu">
+            <li><a href="#header">Home</a></li>
+            <li><a href="#about">About Me</a></li>
+            <li><a href="#portfolio">My Work</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <i class="fas fa-times" onclick="closemenu()"></i>
+          </ul>
+          <i class="fas fa-bars" onclick="openmenu()"></i>
+        </nav>
+        <div class="header-text">
+          <h1>
+            Hi, I'm <span>Andrea</span>
+            <br />
+            Focused on Blockchain & Web Tech
+          </h1>
+          <div class="divnickname"></div>
+        </div>
+      </div>
+    </header>
+    <!-- -----------------------------------------ABOUT----------------------------------------------- -->
+    <div id="about" class="div-scrollify">
+      <div class="container">
+        <div class="row">
+          <div class="about-col-1">
+            <img
+              src="img/skills.gif"
+              onclick="opentab('skills')"
+              class="tab-imgs active-img"
+              id="skills-img"
+              alt="Skills tab"
+            />
+            <img
+              src="img/experience.gif"
+              onclick="opentab('experience')"
+              class="tab-imgs"
+              id="experience-img"
+              alt="Experience tab"
+            />
+            <img
+              src="img/education.gif"
+              onclick="opentab('education')"
+              class="tab-imgs"
+              id="education-img"
+              alt="Education tab"
+            />
+          </div>
+          <div class="about-col-2">
+            <h2 class="sub-title">About Me</h2>
+            <p class="spaced-paragraph">
+              💻 Passionate about technology and innovation, always seeking new
+              challenges and opportunities for growth.
+            </p>
+            <p class="spaced-paragraph">
+              🌐 Immersed in the vast digital world, discovering that curiosity
+              leads to great satisfaction.
+            </p>
+            <p class="spaced-paragraph">
+              💼 Started working after high school to gain economic
+              independence, then realized the value of passion.
+            </p>
+            <p class="spaced-paragraph">
+              🎓 Took the leap into further studies, now constantly finding
+              satisfaction and moving closer to my professional goals.
+            </p>
+            <p>
+              💡 Currently deepening my knowledge in web development and
+              blockchain, with a strong interest in emerging technologies and
+              innovative solutions. Aiming to become a Blockchain Developer,
+              contributing to projects that leverage decentralized technology.
+            </p>
+            <div class="tab-titles">
+              <p class="tab-links active-link" onclick="opentab('skills')">
+                Skills
+              </p>
+              <p class="tab-links" onclick="opentab('experience')">
+                Experience
+              </p>
+              <p class="tab-links" onclick="opentab('education')">Education</p>
+            </div>
+            <div class="tab-contents active-tab" id="skills">
+              <ul>
+                <li>
+                  <span>React</span><br />Building dynamic user interfaces.
+                </li>
+                <li>
+                  <span>JavaScript</span><br />Interactive web functionalities.
+                </li>
+                <li><span>HTML and CSS</span><br />Web Development.</li>
+                <li><span>Marketing</span><br />Marketing campaigns.</li>
+              </ul>
+            </div>
+            <div class="tab-contents" id="experience">
+              <ul>
+                <li>
+                  <span>2023 - Current</span><br />Website Management and
+                  Advertisement Placement.
+                </li>
+                <li><span>2022 - 2023</span><br />Social Media Manager.</li>
+                <li><span>2018 - 2022</span><br />Diagnostic Technician.</li>
+              </ul>
+            </div>
+            <div class="tab-contents" id="education">
+              <ul>
+                <li>
+                  <span>2024 - Current</span><br />Blockchain Development.
+                </li>
+                <li><span>2022 - Current</span><br />English Course.</li>
+                <li><span>2022</span><br />E-commerce and Marketing Course.</li>
+                <li><span>2020</span><br />Marketing Course.</li>
+                <li>
+                  <span>2018</span><br />Electronics Technician Diploma, I.I.S.
+                  F.CORNI TECNICO, Modena (MO).
+                </li>
+              </ul>
+            </div>
+          </div>
         </div>
       </div>
     </div>
-  
-  </header>
-  <!-- -----------------------------------------ABOUT----------------------------------------------- -->
-  <div id="about" class="div-scrollify">
-    <div class="container">
-      <div class="row">
-        <div class="about-col-1">
-          <img src="img/skills.gif" onclick="opentab('skills')" class="tab-imgs active-img" id="skills-img"
-            alt="Skills tab">
-          <img src="img/experience.gif" onclick="opentab('experience')" class="tab-imgs" id="experience-img"
-            alt="Experience tab">
-          <img src="img/education.gif" onclick="opentab('education')" class="tab-imgs" id="education-img"
-            alt="Education tab">
-        </div>
-        <div class="about-col-2">
-          <h2 class="sub-title">About Me</h2>
-          <p>
-          <p><strong>Focus</strong>!<br>
-            📍 Passionate about both technology and the great outdoors, especially the liberating feeling of the
-            mountains.<br>
-            📚 Immersed in the vast digital world, discovering that curiosity leads to happiness.<br>
-            ⏰ Started working post-high school for money, then realized passion's value.<br>
-            💡 Took the leap into further studies, now constantly finding satisfaction.</p>
+    <!---------------------------------------- MY WORK ---------------------------------------------------->
+    <div id="portfolio" class="div-scrollify">
+      <div class="container">
+        <h2 class="sub-title">My Work</h2>
+        <div class="portfolio-list">
+          <div class="github">
+            <i class="fa-brands fa-github"></i>
+            <h2>My GitHub</h2>
+            <p>Explore my projects and repositories on GitHub.</p>
+            <a
+              href="https://github.com/stampcodes"
+              target="_blank"
+              class="btn btn3"
+              >Go to My GitHub</a
+            >
+          </div>
+          <div class="github">
+            <i class="fa-solid fa-circle-info"></i>
+            <h2>New York Times</h2>
+            <p>Check out my React-based project for the New York Times.</p>
+            <a
+              href="https://stampcodes.github.io/newYorkTimesClone"
+              target="_blank"
+              class="btn btn3"
+              >Go to the website</a
+            >
+          </div>
 
-          </p>
-          <div class="tab-titles">
-            <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
-            <p class="tab-links" onclick="opentab('experience')">Experience</p>
-            <p class="tab-links" onclick="opentab('education')">Education</p>
-          </div>
-          <div class="tab-contents active-tab" id="skills">
-            <ul>
-              <li><span>React</span><br>Building dynamic user interfaces.</li>
-              <li><span>JavaScript</span><br>Interactive web functionalities.</li>
-              <li><span>HTML and CSS</span><br>Web Development.</li>
-              <li><span>Marketing</span><br>Marketing campaigns.</li>
-            </ul>
-          </div>
-          <div class="tab-contents" id="experience">
-            <ul>
-              <li><span>2023 - Current</span><br>Website Management and Advertisement Placement.</li>
-              <li><span>2022 - 2023</span><br>Social Media Manager.</li>
-              <li><span>2018 - 2022</span><br>Diagnostic Technician.</li>
-            </ul>
-          </div>
-          <div class="tab-contents" id="education">
-            <ul>
-              <li><span>2024 - Current</span><br>Blockchain Development.</li>
-              <li><span>2022 - Current</span><br>English Course.</li>
-              <li><span>2022</span><br>E-commerce and Marketing Course.</li>
-              <li><span>2020</span><br>Marketing Course.</li>
-              <li><span>2018</span><br>Electronics Technician Diploma, I.I.S. F.CORNI TECNICO, Modena (MO).</li>
-            </ul>
+          <div>
+            <i class="fa-solid fa-file"></i>
+            <h2>Web3 Education</h2>
+            <p>Learn about dApp and NFT projects in Web3 Education.</p>
+            <a href="img/project-education.pdf" download class="btn"
+              >Download PDF</a
+            >
           </div>
         </div>
       </div>
     </div>
-    
-  </div>
-  <!---------------------------------------- MY WORK ---------------------------------------------------->
-  <div id="portfolio" class="div-scrollify">
-    <div class="container">
-      <h2 class="sub-title">My Work</h2>
-      <div class="portfolio-list">
-        <div class="github">
-          <i class="fa-brands fa-github"></i>
-          <h2>My GitHub</h2>
-          <p>Explore my projects and repositories on GitHub.</p>
-          <a href="https://github.com/stampcodes" target="_blank" class="btn btn3">Go to My GitHub</a>
-        </div>
-        <div class="github">
-          <i class="fa-solid fa-circle-info"></i>
-          <h2>New York Times</h2>
-          <p>Check out my React-based project for the New York Times.</p>
-          <a href="https://stampcodes.github.io/newYorkTimesClone" target="_blank" class="btn btn3">Go to the website</a>
-        </div>
+    <!-- -----------------------------------------CONTACT------------------------------------------------->
+    <div id="contact" class="div-scrollify">
+      <div class="container">
+        <h2 class="sub-title titlecontact">Contact me</h2>
+        <div class="row">
+          <div class="contact-left">
+            <div class="social-icons">
+              <a
+                href="https://www.linkedin.com/in/andrea-fragnelli-a1ab4a207/"
+                target="_blank"
+                ><i class="fa-brands fa-linkedin"></i
+              ></a>
+              <a
+                href="https://www.facebook.com/andrea.fragnelli.58/"
+                target="_blank"
+                ><i class="fa-brands fa-square-facebook"></i
+              ></a>
+              <a href="https://www.instagram.com/stamp.exe/" target="_blank"
+                ><i class="fa-brands fa-square-instagram"></i
+              ></a>
+            </div>
+          </div>
+          <div class="contact-right">
+            <form id="emailjs">
+              <input type="text" name="Name" placeholder="Your Name" required />
+              <input
+                type="email"
+                name="Email"
+                placeholder="Your Email"
+                required
+              />
+              <textarea
+                name="message"
+                rows="6"
+                placeholder="Your Message"
+                required
+              ></textarea>
+              <button type="submit" class="btn btn2">Submit</button>
+            </form>
+            <!-- Div per il messaggio di successo -->
+            <div id="success-message" style="display: none">
+              Email successfully sent!
+            </div>
 
-        <div>
-          <i class="fa-solid fa-file"></i>
-          <h2>Web3 Education</h2>
-          <p>Learn about dApp and NFT projects in Web3 Education.</p>
-          <a href="img/project-education.pdf" download class="btn">Download PDF</a>
-        </div>
-      </div>
-      
-    </div>
-  </div>
-  <!-- -----------------------------------------CONTACT------------------------------------------------->
-  <div id="contact" class="div-scrollify">
-    <div class="container">
-      <h2 class="sub-title titlecontact">Contact me</h2>
-      <div class="row">
-        <div class="contact-left">
-          <div class="social-icons">
-            <a href="https://www.linkedin.com/in/andrea-fragnelli-a1ab4a207/" target="_blank"><i
-                class="fa-brands fa-linkedin"></i></a>
-            <a href="https://www.facebook.com/andrea.fragnelli.58/" target="_blank"><i
-                class="fa-brands fa-square-facebook"></i></a>
-            <a href="https://www.instagram.com/stamp.exe/" target="_blank"><i
-                class="fa-brands fa-square-instagram"></i></a>
+            <!-- Div per il messaggio di errore -->
+            <div id="error-message" style="display: none">
+              Error sending email. Please try again later.
+            </div>
           </div>
         </div>
-        <div class="contact-right">
-          <form id="emailjs">
-            <input type="text" name="Name" placeholder="Your Name" required>
-            <input type="email" name="Email" placeholder="Your Email" required>
-            <textarea name="message" rows="6" placeholder="Your Message" required></textarea>
-            <button type="submit" class="btn btn2">Submit</button>
-          </form>
-          <!-- Div per il messaggio di successo -->
-          <div id="success-message" style="display: none;">Email successfully sent!</div>
-
-          <!-- Div per il messaggio di errore -->
-          <div id="error-message" style="display: none;">Error sending email. Please try again later.</div>
-        </div>
+      </div>
+      <div class="copyright">
+        <p>Copyright &copy; 2024 Stamp. All rights reserved.</p>
       </div>
     </div>
-    <div class="copyright">
-      <p>Copyright &copy; 2024 Stamp. All rights reserved.</p>
-    </div>
-  </div>
-  <script src="main.js"></script>
-</body>
-
+    <script src="main.js"></script>
+  </body>
 </html>
