@@ -42,3 +42,10 @@ body {
 .scroll-to.scroll-to-header {
   margin-top: 320px;
 }
+
+.div-scrollify {
+  height: 100vh; /* Ensure sections are at least the height of the viewport */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}

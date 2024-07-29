@@ -1,21 +1,26 @@
 $(function () {
   $.scrollify({
     section: ".div-scrollify",
+    sectionName: false,
+    interstitialSection: "",
     easing: "easeOutExpo",
-    scrollSpeed: 1300,
+    scrollSpeed: 1100,
     offset: 0,
-    scrollbars: true, // Disabilita le barre di scorrimento del browser
-    setHeights: false,
+    scrollbars: true, // Abilita le barre di scorrimento predefinite
+    setHeights: false, // Non impostare automaticamente le altezze delle sezioni
     overflowScroll: true,
-    updateHash: true,
+    updateHash: false,
     touchScroll: true,
-    before: function () { },
-    after: function () { },
-    afterResize: function () { },
-    afterRender: function () { }
+    before: function () {},
+    after: function () {},
+    afterResize: function () {
+      $.scrollify.update(); // Aggiorna Scrollify dopo il ridimensionamento
+    },
+    afterRender: function () {
+      $.scrollify.update(); // Aggiorna Scrollify dopo il rendering
+    },
   });
 });
-
 
 var tablinks = document.getElementsByClassName("tab-links");
 var tabcontents = document.getElementsByClassName("tab-contents");
@@ -35,10 +40,14 @@ function opentab(tabname) {
   document.getElementById(tabname + "-img").classList.add("active-img");
 }
 
-window.addEventListener('scroll', function () {
+window.addEventListener("scroll", function () {
   var scrollPosition = window.scrollY;
-  var translateY = Math.min(scrollPosition, document.getElementById('header').offsetHeight);
-  document.getElementById('header').querySelector('img').style.transform = 'translateY(' + translateY + 'px)';
+  var translateY = Math.min(
+    scrollPosition,
+    document.getElementById("header").offsetHeight
+  );
+  document.getElementById("header").querySelector("img").style.transform =
+    "translateY(" + translateY + "px)";
 });
 
 var sidemenu = document.getElementById("sidemenu");
@@ -71,36 +80,35 @@ $(window).resize(function () {
   disableScrollifyOnMobile();
 });
 
-
-  
-
-document.addEventListener('DOMContentLoaded', function () {
+document.addEventListener("DOMContentLoaded", function () {
   emailjs.init("Xv2ukgIG4nYqVenOs");
-  const form = document.getElementById('emailjs');
-  const successMessage = document.getElementById('success-message');
-  const errorMessage = document.getElementById('error-message');
+  const form = document.getElementById("emailjs");
+  const successMessage = document.getElementById("success-message");
+  const errorMessage = document.getElementById("error-message");
 
-  form.addEventListener('submit', function (event) {
+  form.addEventListener("submit", function (event) {
     event.preventDefault(); // Impedisce l'invio del modulo predefinito
 
     // Invia i dati del modulo a EmailJS
-    emailjs.sendForm('service_n7p177b', 'template_jov794d', this)
-      .then(function (response) {
-        console.log('Email successfully sent!', response);
+    emailjs.sendForm("service_n7p177b", "template_jov794d", this).then(
+      function (response) {
+        console.log("Email successfully sent!", response);
         // Aggiungi qui il codice per gestire la visualizzazione di un messaggio di successo all'utente
-        successMessage.style.display = 'block'; // Mostra il messaggio di successo
+        successMessage.style.display = "block"; // Mostra il messaggio di successo
         setTimeout(function () {
-          successMessage.style.display = 'none';
+          successMessage.style.display = "none";
         }, 5000);
-        errorMessage.style.display = 'none'; // Nasconde il messaggio di errore
-      }, function (error) {
-        console.error('Error sending email, Please try again later.', error);
+        errorMessage.style.display = "none"; // Nasconde il messaggio di errore
+      },
+      function (error) {
+        console.error("Error sending email, Please try again later.", error);
         // Aggiungi qui il codice per gestire la visualizzazione di un messaggio di errore all'utente
-        successMessage.style.display = 'none'; // Nasconde il messaggio di successo
-        errorMessage.style.display = 'block'; // Mostra il messaggio di errore
+        successMessage.style.display = "none"; // Nasconde il messaggio di successo
+        errorMessage.style.display = "block"; // Mostra il messaggio di errore
         setTimeout(function () {
-          errorMessage.style.display = 'none';
+          errorMessage.style.display = "none";
         }, 5000);
-      });
+      }
+    );
   });
 });
