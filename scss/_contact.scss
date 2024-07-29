@@ -1,8 +1,7 @@
 #contact {
-  padding: 30px 0;
   color: #fff;
   width: 100%;
-  min-height: 100vh; /* Assicura che la sezione riempia l'altezza della finestra */
+  height: 100vh; /* Assicura che la sezione riempia l'altezza della finestra */
   display: flex;
   flex-direction: column;
   justify-content: space-between; /* Spinge il contenuto in basso */

@@ -1,6 +1,5 @@
 /* --------- HEADER --------- */
 
-
 #header {
   width: 100%;
   height: 100vh;
@@ -9,7 +8,6 @@
   background-position: center;
   background-attachment: fixed;
   position: relative;
- 
 }
 
 .logo {
@@ -19,7 +17,6 @@
 .container {
   padding: 10px 10%;
 }
-
 
 nav {
   display: flex;
@@ -46,12 +43,11 @@ nav ul li a {
   position: relative;
 }
 
-
 nav ul li a::after {
   content: "";
   width: 0;
   height: 3px;
-  background: #F79621;
+  background: #f79621;
   position: absolute;
   left: 0;
   bottom: -6px;
@@ -63,11 +59,9 @@ nav ul li a:hover::after {
   width: 100%;
 }
 
-
 .header-text {
   margin-top: 10%;
   font-size: 30px;
-
 }
 
 .header-text h1 {
@@ -76,16 +70,14 @@ nav ul li a:hover::after {
 }
 
 .header-text h1 span {
-  color: #F79621;
+  color: #f79621;
 }
 
 .nickname {
   font-size: 40px;
 }
 
-
-
 .divnickname p span {
-  color: #F79621;
+  color: #f79621;
   font-weight: 600;
 }
