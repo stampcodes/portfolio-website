@@ -23,11 +23,12 @@
 }
 
 .about-col-2 {
+  margin-top: 80px;
   flex-basis: 60%;
 }
 
 .sub-title {
-  font-size: 60px;
+  font-size: 40px;
   font-weight: 600;
   color: #fff;
 }
@@ -74,7 +75,7 @@
 }
 
 .tab-contents ul li span {
-  font-size: 25px;
+  font-size: 20px;
   color: #f79621;
 }
 
@@ -107,4 +108,9 @@
 .skills-column {
   flex: 0 0 48%; /* Imposta la larghezza delle colonne per distribuire meglio lo spazio */
   box-sizing: border-box;
+}
+
+.spaced-paragraph,
+.spaced-paragraph-last {
+  font-size: 15px;
 }
