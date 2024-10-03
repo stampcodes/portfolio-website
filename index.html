@@ -270,10 +270,15 @@
           </div>
           <div class="contact-right">
             <form id="emailjs">
-              <input type="text" name="Name" placeholder="Your Name" required />
+              <input
+                type="text"
+                name="to_name"
+                placeholder="Your Name"
+                required
+              />
               <input
                 type="email"
-                name="Email"
+                name="from_email"
                 placeholder="Your Email"
                 required
               />
@@ -285,11 +290,11 @@
               ></textarea>
               <button type="submit" class="btn btn2">Submit</button>
             </form>
-            <!-- Div per il messaggio di successo -->
+
+            <!-- Messaggi di feedback -->
             <div id="success-message" style="display: none">
               Email successfully sent!
             </div>
-            <!-- Div per il messaggio di errore -->
             <div id="error-message" style="display: none">
               Error sending email. Please try again later.
             </div>

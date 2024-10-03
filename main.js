@@ -1,3 +1,44 @@
+document.addEventListener("DOMContentLoaded", function () {
+  // Inizializza EmailJS
+  emailjs.init("Xv2ukgIG4nYqVenOs"); // Usa la tua Public Key di EmailJS
+
+  // Seleziona il form e i messaggi di feedback
+  const form = document.getElementById("emailjs");
+  const successMessage = document.getElementById("success-message");
+  const errorMessage = document.getElementById("error-message");
+
+  // Ascolta l'invio del form
+  form.addEventListener("submit", function (event) {
+    event.preventDefault(); // Blocca il comportamento predefinito del form
+
+    // Nascondi i messaggi precedenti
+    successMessage.style.display = "none";
+    errorMessage.style.display = "none";
+
+    // Invia il form tramite EmailJS usando .then() e .catch()
+    emailjs.sendForm("service_n7p177b", "template_jov794d", form).then(
+      function (response) {
+        console.log("SUCCESS!", response.status, response.text);
+
+        // Mostra il messaggio di successo
+        successMessage.style.display = "block";
+        setTimeout(function () {
+          successMessage.style.display = "none";
+        }, 5000);
+      },
+      function (error) {
+        console.log("FAILED...", error);
+
+        // Mostra il messaggio di errore
+        errorMessage.style.display = "block";
+        setTimeout(function () {
+          errorMessage.style.display = "none";
+        }, 5000);
+      }
+    );
+  });
+});
+
 $(function () {
   $.scrollify({
     section: ".div-scrollify",
@@ -74,35 +115,5 @@ $(function () {
 
   $(window).on("resize", function () {
     disableScrollifyOnMobile();
-  });
-
-  document.addEventListener("DOMContentLoaded", function () {
-    emailjs.init("Xv2ukgIG4nYqVenOs");
-    const form = document.getElementById("emailjs");
-    const successMessage = document.getElementById("success-message");
-    const errorMessage = document.getElementById("error-message");
-
-    form.addEventListener("submit", function (event) {
-      event.preventDefault();
-
-      emailjs.sendForm("service_n7p177b", "template_jov794d", this).then(
-        function (response) {
-          console.log("Email successfully sent!", response);
-          successMessage.style.display = "block";
-          setTimeout(function () {
-            successMessage.style.display = "none";
-          }, 5000);
-          errorMessage.style.display = "none";
-        },
-        function (error) {
-          console.error("Error sending email, Please try again later.", error);
-          successMessage.style.display = "none";
-          errorMessage.style.display = "block";
-          setTimeout(function () {
-            errorMessage.style.display = "none";
-          }, 5000);
-        }
-      );
-    });
   });
 });
